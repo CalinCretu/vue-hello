@@ -13,8 +13,17 @@
 
 <body>
   <div id="app">
-    <h1>{{ message }}</h1>
-    <p>{{ content }}</p>
+    <div :class="[className, image]" class="container p-5">
+      <div :class="colorWhite">
+        <h1>{{ message }}</h1>
+        <p>{{ content }}</p>
+        <div class="counter mb-3">{{ num }} Members</div>
+        <button class="mb-3 p-1 border" @click="onClick">+1</button>
+        <ul>
+          <li v-for="member in member">{{ member }}</li>
+        </ul>
+      </div>
+    </div>
   </div>
 
   <script src="js/app.js"></script>
